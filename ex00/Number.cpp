@@ -192,24 +192,24 @@ void	Number::isChar()
 void	Number::isInt()
 {
 	_i = atoi(_s.c_str());
-	_c = static_cast<int>(_i);
+	_c = static_cast<char>(_i);
 	_f = static_cast<float>(_i);
 	_d = static_cast<double>(_i);
 }
 
 void	Number::isFloat()
 {
-	_c = 0;
 	_f = static_cast<float>(atof(_s.c_str()));
+	_c = static_cast<char>(_i);
 	_i = static_cast<int>(_f);
 	_d = static_cast<double>(_f);
 }
 
 void	Number::isDouble()
 {
-	_c = 0;
 	_d = atof(_s.c_str());
 	_i = static_cast<int>(_d);
+	_c = static_cast<char>(_i);
 	_f = static_cast<float>(_d);
 }
 
